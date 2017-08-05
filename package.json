@@ -1,0 +1,22 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Notes SPA with ReactJS + Webpack + Express.js + MongoDB",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLazareva/notes-app.git"
+  },
+  "author": "Alex Lazareva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexLazareva/notes-app/issues"
+  },
+  "homepage": "https://github.com/AlexLazareva/notes-app#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
