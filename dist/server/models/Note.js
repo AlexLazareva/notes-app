@@ -12,7 +12,7 @@ var NoteSchema = new Schema({
         title: { type: String },
         text: { type: String, required: true },
         color: { type: String },
-        createApp: { type: Date }
+        createdApp: { type: Date }
 });
 
 var Note = _mongoose2['default'].model('Note', NoteSchema);
