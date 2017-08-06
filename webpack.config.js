@@ -6,7 +6,7 @@ const PATHS = {
     build: path.join(__dirname, 'public')
 };
 
-module.exports = {
+const common = {
     entry: PATHS.source + '/index.js',
     output: {
         path: PATHS.build,
@@ -34,4 +34,24 @@ module.exports = {
             template: PATHS.source + '/index.pug'
         })
     ]
+};
+
+const developmentConfig = {
+    devServer: {
+        stats: 'errors-only',
+        port: 8090
+    }
+};
+
+module.exports = function (env) {
+    if (env === 'production') {
+        return common;
+    }
+    if (env === 'development') {
+        return Object.assign(
+            {},
+            common,
+            developmentConfig
+        )
+    }
 };
