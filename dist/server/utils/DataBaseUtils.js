@@ -14,12 +14,16 @@ var _mongoose = require('mongoose');
 
 var _mongoose2 = _interopRequireDefault(_mongoose);
 
+var _etcConfigJson = require('../../etc/config.json');
+
+var _etcConfigJson2 = _interopRequireDefault(_etcConfigJson);
+
 require('../models/Note');
 
 var Note = _mongoose2['default'].model('Note');
 
 function setUpConnection() {
-    _mongoose2['default'].connect('mongodb://localhost/notes');
+    _mongoose2['default'].connect('mongodb://' + _etcConfigJson2['default'].db.host + ':' + _etcConfigJson2['default'].db.port + '/' + _etcConfigJson2['default'].db.name);
 }
 
 function listNotes() {

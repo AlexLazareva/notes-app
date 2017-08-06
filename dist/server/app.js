@@ -12,6 +12,8 @@ var _bodyParser = require('body-parser');
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
+var _etcConfigJson = require('../etc/config.json');
+
 var _utilsDataBaseUtilsJs = require('./utils/DataBaseUtils.js');
 
 var db = _interopRequireWildcard(_utilsDataBaseUtilsJs);
@@ -40,7 +42,7 @@ app['delete']('/notes/:id', function (req, res) {
     });
 });
 
-var server = app.listen(8080, function () {
-    console.log('Server is up and running on port 8080');
+var server = app.listen(_etcConfigJson.serverPort, function () {
+    console.log('Server is up and running on port ' + _etcConfigJson.serverPort);
 });
 //# sourceMappingURL=app.js.map
