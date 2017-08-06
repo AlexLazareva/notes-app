@@ -1,3 +1,15 @@
-/**
- * Created by Alex_Lazareva on 06.08.2017.
- */
+module.exports = function () {
+    return {
+        module: {
+            rules: [
+                {
+                    test: /\.pug$/,
+                    loader: 'pug-loader',
+                    options: {
+                        pretty: true
+                    }
+                }
+            ]
+        }
+    }
+};
