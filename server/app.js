@@ -22,5 +22,5 @@ app.delete('/notes/:id', (req, res) => {
 });
 
 const server = app.listen(8080, () => {
-        console.log('Server is up and running on port 8080');
-    });
+        console.log(`Server is up and running on port 8080`);
+});

@@ -4,6 +4,8 @@
   "description": "Notes SPA with ReactJS + Webpack + Express.js + MongoDB",
   "main": "webpack.config.js",
   "scripts": {
+    "start": "webpack-dev-server --progress --inline --hot",
+    "server": "babel-node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,13 @@
   },
   "homepage": "https://github.com/AlexLazareva/notes-app#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.12.3",
+    "express": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "babel": "5.x",
+    "babel-loader": "5.*",
+    "webpack": "^3.4.1"
   }
 }
