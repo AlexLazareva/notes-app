@@ -3,14 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'client'),
-    build: path.join(__dirname, 'public/build')
+    build: path.join(__dirname, 'public')
 };
 
 module.exports = {
     entry: PATHS.source + '/index.js',
     output: {
         path: PATHS.build,
-        filename: '[name].js'
+        filename: 'build/[name].js'
     },
 
     module: {
@@ -23,7 +23,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack app'
+            title: 'Notes SPA'
         })
     ]
 };

@@ -4,6 +4,7 @@
   "description": "Notes SPA with ReactJS + Webpack + Express.js + MongoDB",
   "main": "webpack.config.js",
   "scripts": {
+    "start": "webpack",
     "start-server": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8090 --host 0.0.0.0",
     "server": "babel-node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
