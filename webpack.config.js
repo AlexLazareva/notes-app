@@ -14,16 +14,24 @@ module.exports = {
     },
 
     module: {
-        loaders: [{
+        rules: [{
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
-        }]
+        },
+        {
+            test: /\.pug$/,
+            loader: 'pug-loader',
+            options: {
+                pretty: true
+            }
+         }
+        ]
     },
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Notes SPA'
+            template: PATHS.source + '/index.pug'
         })
     ]
 };
