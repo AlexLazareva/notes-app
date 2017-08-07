@@ -29,6 +29,7 @@ const common = merge([
             ]
         },
         pug(),
+        jsx(),
         images()
 ]);
 
@@ -43,7 +44,6 @@ module.exports = function (env) {
         return merge([
             common,
             devserver(),
-            jsx(),
             sass(),
             css()
         ])
