@@ -7,6 +7,7 @@ const jsx = require('./webpack/jsx');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
+const images = require('./webpack/images');
 
 const PATHS = {
     source: path.join(__dirname, 'client'),
@@ -27,7 +28,8 @@ const common = merge([
                 })
             ]
         },
-        pug()
+        pug(),
+        images()
 ]);
 
 module.exports = function (env) {
