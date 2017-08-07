@@ -4,15 +4,18 @@ import NotesGrid from './../NotesGrid/NotesGrid';
 import 'normalize.css';
 import './style.css';
 
-export default class App extends React.Component {
-
-    render() {
-        return (
-            <div className="app">
-                <h2 className="app__header">Notes App</h2>
-                <NotesEditor />
-                <NotesGrid />
-            </div>
-        );
+const App = React.createClass(
+    {
+        render() {
+            return (
+                <div className="app">
+                    <h2 className="app__header">Notes App</h2>
+                    <NotesEditor />
+                    <NotesGrid />
+                </div>
+            );
+        }
     }
-}
+);
+
+export default App;

@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --env production",
-    "start-server": "webpack-dev-server --debug --hot --devtool --output-pathinfo --watch --colors --host 0.0.0.0 --env development",
+    "start": "webpack-dev-server --debug --hot --devtool --output-pathinfo --watch --colors --host 0.0.0.0 --env development",
     "server": "babel-node server/app.js",
     "serv-static": "static public",
     "test": "echo \"Error: no test specified\" && exit 1"

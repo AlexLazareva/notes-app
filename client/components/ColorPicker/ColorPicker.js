@@ -1,16 +1,16 @@
 import React from 'react';
 
-const NotesGrid = React.createClass(
+const ColorPicker = React.createClass(
     {
 
         render() {
             return (
                 <div>
-                    NotesGrid
+                    ColorPicker
                 </div>
             );
         }
     }
 );
 
-export default NotesGrid;
+export default ColorPicker;
