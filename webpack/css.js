@@ -1,4 +1,4 @@
-module.exports = function (paths) {
+module.exports = function(paths) {
     return {
         module: {
             rules: [
@@ -12,5 +12,5 @@ module.exports = function (paths) {
                 }
             ]
         }
-    }
-}
+    };
+};
