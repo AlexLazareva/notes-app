@@ -5,6 +5,7 @@ const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const jsx = require('./webpack/jsx');
 const sass = require('./webpack/sass');
+const css = require('./webpack/css');
 
 const PATHS = {
     source: path.join(__dirname, 'client'),
@@ -25,8 +26,7 @@ const common = merge([
                 })
             ]
         },
-        pug(),
-        jsx()
+        pug()
 ]);
 
 module.exports = function (env) {
@@ -37,7 +37,9 @@ module.exports = function (env) {
         return merge([
             common,
             devserver(),
-            sass()
+            jsx(),
+            sass(),
+            css()
         ])
     }
 };
