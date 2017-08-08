@@ -8,8 +8,19 @@ body {
     background-color: #eaeaea;
 }
 
-.app {
+#app {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.app {
+    max-width: 1200px;
+    width: 100%;
+}
+.app__header {
+    text-align: center;
+    font-weight: 500;
+    color: grey;
+    text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
 }

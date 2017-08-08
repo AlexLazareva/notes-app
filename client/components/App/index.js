@@ -6,11 +6,16 @@ import './style.css';
 
 const App = React.createClass(
     {
+        handleNoteAdd(data) {
+            console.log(data);
+    },
         render() {
             return (
                 <div className="app">
                     <h2 className="app__header">Notes App</h2>
-                    <NotesEditor />
+                    <NotesEditor
+                        onNoteAdd={this.handleNoteAdd}
+                    />
                     <NotesGrid />
                 </div>
             );
