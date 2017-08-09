@@ -1,4 +1,35 @@
 import AppDispatcher from './../dispatcher/AppDispatcher';
-import Constans from '../constants/AppConstants';
+import Constants from '../constants/AppConstants';
 
-import api from './../api/index'
+import api from './../api/index';
+
+const NoteActions = {
+    loadNotes() {
+        AppDispatcher.dispatch({
+            type: Constants.LOAD_NOTES_REQUEST
+        });
+
+        api.listNotes()
+            .then(({data}) =>
+                AppDispatcher.dispatch({
+                    type: Constants.LOAD_NOTES_SUCCESS,
+                    notes: data
+                })
+            )
+            .catch(err =>
+                AppDispatcher.dispatch({
+                    type: Constants.LOAD_NOTES_FAIL,
+                    error: err
+                })
+            );
+    },
+
+    createNote(note) {
+        
+    },
+
+    deleteNote(noteId) {
+
+    }
+};
+
