@@ -35,7 +35,15 @@ const NoteActions = {
     },
 
     deleteNote(noteId) {
-
+        api.deleteNote(noteId)
+            .then(() =>
+                this.loadNotes()
+            )
+            .catch(err =>
+                console.log(err)
+            );
     }
 };
+
+export default NoteActions;
 
