@@ -14,23 +14,33 @@ function getStateFromFlux() {
     };
 }
 
-const App = React.createClass(
-    {
-        handleNoteAdd(data) {
-            console.log(data);
+const App = React.createClass({
+    getInitialState() {
+        return getStateFromFlux();
     },
-        render() {
-            return (
-                <div className="app">
-                    <h2 className="app__header">Notes App</h2>
-                    <NotesEditor
-                        onNoteAdd={this.handleNoteAdd}
-                    />
-                    <NotesGrid />
-                </div>
-            );
-        }
+
+    componentDidMount() {
+        NotesStore.addChangeListener(this._onChange);
+    },
+
+    componentWillUnmount() {
+        NotesStore.removeChangeListener(this._onChange);
+    },
+
+    handleNoteAdd(data) {
+        console.log(data);
+    },
+    render() {
+        return (
+            <div className="app">
+                <h2 className="app__header">Notes App</h2>
+                <NotesEditor
+                    onNoteAdd={this.handleNoteAdd}
+                />
+                <NotesGrid />
+            </div>
+        );
     }
-);
+});
 
 export default App;
