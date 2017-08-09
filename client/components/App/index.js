@@ -1,5 +1,6 @@
 import React from 'react';
 import NotesStore from './../../stores/NotesStore';
+import NotesActions from '../../actions/NotesActions';
 
 import NotesEditor from './../NotesEditor/NotesEditor';
 import NotesGrid from './../NotesGrid/NotesGrid';
@@ -17,6 +18,10 @@ function getStateFromFlux() {
 const App = React.createClass({
     getInitialState() {
         return getStateFromFlux();
+    },
+
+    componentWillMount() {
+        NotesEditor.loadNotes();
     },
 
     componentDidMount() {
