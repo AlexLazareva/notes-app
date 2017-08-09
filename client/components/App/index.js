@@ -40,6 +40,10 @@ const App = React.createClass({
                 <NotesGrid />
             </div>
         );
+    },
+
+    _onChange() {
+        this.setState(getStateFromFlux());
     }
 });
 
