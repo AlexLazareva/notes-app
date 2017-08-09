@@ -1,8 +1,18 @@
 import React from 'react';
+import NotesStore from './../../stores/NotesStore';
+
 import NotesEditor from './../NotesEditor/NotesEditor';
 import NotesGrid from './../NotesGrid/NotesGrid';
+
 import 'normalize.css';
 import './style.css';
+
+function getStateFromFlux() {
+    return {
+        isLoading: NotesStore.isLoading(),
+        notes: NotesStore.getNotes()
+    };
+}
 
 const App = React.createClass(
     {
