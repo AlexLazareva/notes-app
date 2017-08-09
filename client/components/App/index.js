@@ -21,7 +21,7 @@ const App = React.createClass({
     },
 
     componentWillMount() {
-        NotesEditor.loadNotes();
+        NotesActions.loadNotes();
     },
 
     componentDidMount() {
@@ -32,8 +32,12 @@ const App = React.createClass({
         NotesStore.removeChangeListener(this._onChange);
     },
 
+    handleNoteDelete(note) {
+        NotesActions.deleteNote(note.id);
+    },
+
     handleNoteAdd(data) {
-        console.log(data);
+        NotesActions.createNote(data);
     },
     render() {
         return (
