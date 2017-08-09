@@ -1,16 +1,25 @@
 import React from 'react';
+import Masonry from 'react-masonry-component';
 
-const NotesGrid = React.createClass(
-    {
+const masonryOptions = {
+    itemSelector: '.note',
+    columnWidth: 250,
+    gutter: 10,
+    isFitWidth: true
+};
 
-        render() {
-            return (
-                <div>
-                    NotesGrid
-                </div>
-            );
-        }
+const NotesGrid = React.createClass({
+
+    render() {
+        return (
+            <Masonry
+                className='notesGrid'
+                options={masonryOptions}
+            >
+
+            </Masonry>
+        );
     }
-);
+});
 
 export default NotesGrid;

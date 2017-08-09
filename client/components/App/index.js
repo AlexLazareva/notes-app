@@ -32,9 +32,9 @@ const App = React.createClass({
         NotesStore.removeChangeListener(this._onChange);
     },
 
-    handleNoteDelete(note) {
+    /*handleNoteDelete(note) {
         NotesActions.deleteNote(note.id);
-    },
+    },*/
 
     handleNoteAdd(data) {
         NotesActions.createNote(data);
