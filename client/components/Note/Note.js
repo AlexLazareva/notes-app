@@ -6,7 +6,7 @@ const Note = React.createClass({
     render() {
         const style = {backgroundColor: this.props.color};
         return (
-            <div className="note">
+            <div className="note" style={style}>
                 <span className="note__del-icon" onClick={this.props.onDelete}> × </span>
                 {
                     this.props.title
