@@ -32,13 +32,14 @@ const App = React.createClass({
         NotesStore.removeChangeListener(this._onChange);
     },
 
-    /*handleNoteDelete(note) {
+    handleNoteDelete(note) {
         NotesActions.deleteNote(note.id);
-    },*/
+    },
 
     handleNoteAdd(data) {
         NotesActions.createNote(data);
     },
+
     render() {
         return (
             <div className="app">
@@ -46,7 +47,10 @@ const App = React.createClass({
                 <NotesEditor
                     onNoteAdd={this.handleNoteAdd}
                 />
-                <NotesGrid />
+                <NotesGrid
+                    notes={this.state.notes}
+                    onNoteDelete={this.handleNoteDelete}
+                />
             </div>
         );
     },
