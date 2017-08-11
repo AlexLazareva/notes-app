@@ -24,6 +24,7 @@
     "axios": "^0.16.2",
     "body-parser": "^1.12.3",
     "classnames": "^2.2.5",
+    "cors": "^2.8.4",
     "events": "^1.1.1",
     "express": "*",
     "flux": "^3.1.3",
