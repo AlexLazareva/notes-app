@@ -1,5 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
+import Note from './../Note/Note';
+import './style.scss';
 
 const masonryOptions = {
     itemSelector: '.note',
