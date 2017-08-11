@@ -6,7 +6,7 @@ import NotesEditor from './../NotesEditor/NotesEditor';
 import NotesGrid from './../NotesGrid/NotesGrid';
 
 import 'normalize.css';
-import './style.css';
+import './style.scss';
 
 function getStateFromFlux() {
     return {
