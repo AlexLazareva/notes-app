@@ -10,7 +10,7 @@ const masonryOptions = {
     isFitWidth: true
 };
 
-const NotesGrid = React.createClass({
+export default class NotesGrid extends React.Component {
 
     render() {
         return (
@@ -33,6 +33,4 @@ const NotesGrid = React.createClass({
             </Masonry>
         );
     }
-});
-
-export default NotesGrid;
+}
